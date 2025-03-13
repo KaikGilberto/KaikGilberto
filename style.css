@@ -1,0 +1,69 @@
+:root {
+  --neon-green: #00ff00;
+  --cyber-blue: #0ff;
+  --dark-bg: #000;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #000;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+#terminal {
+    background: rgba(0, 0, 0, 0.8);
+    color: #0F0;
+    border: 1px solid #0F0;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.header {
+    border-bottom: 1px solid #0F0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#content {
+    white-space: pre;
+    line-height: 1.5;
+}
+
+.mission-container {
+  background: linear-gradient(45deg, #000, #001100);
+  border: 1px solid var(--neon-green);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--neon-green);
+}
+
+img {
+  filter: drop-shadow(0 0 5px var(--neon-green));
+}
+
+/* Animação de pulso para elementos importantes */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
