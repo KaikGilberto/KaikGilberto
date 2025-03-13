@@ -1,16 +1,18 @@
 :root {
-  --neon-green: #00ff00;
-  --cyber-blue: #0ff;
-  --dark-bg: #000;
+    --primary: #0ff;
+    --secondary: #f0f;
+    --accent: #ff0;
+    --dark: #000;
+    --glow: 0 0 10px var(--primary);
 }
 
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #000;
-    font-family: 'Courier New', monospace;
-    overflow: hidden;
+    background: var(--dark);
+    font-family: 'Fira Code', monospace;
+    color: var(--primary);
 }
 
 #matrix-bg {
@@ -28,13 +30,16 @@ body, html {
 
 #terminal {
     background: rgba(0, 0, 0, 0.8);
-    color: #0F0;
-    border: 1px solid #0F0;
-    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
     padding: 20px;
     max-width: 800px;
     margin: 50px auto;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    box-shadow: 
+        0 0 20px var(--primary),
+        inset 0 0 20px var(--primary);
+    animation: borderGlow 4s infinite alternate;
 }
 
 .header {
@@ -66,4 +71,24 @@ img {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
+}
+
+@keyframes borderGlow {
+    0% { border-color: var(--primary); box-shadow: 0 0 20px var(--primary); }
+    50% { border-color: var(--secondary); box-shadow: 0 0 20px var(--secondary); }
+    100% { border-color: var(--accent); box-shadow: 0 0 20px var(--accent); }
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.glitch {
+    animation: glitch 0.3s infinite;
+    animation-timing-function: steps(1);
 }
