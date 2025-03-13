@@ -1,78 +1,79 @@
-# 🌱 Kaik Gilberto - Tech Farmer 🚜
+<div align="center">
+  <img src="./assets/header-banner.gif" width="100%">
+  
+  # ⚡️ KAIK GILBERTO ⚡️
+  [ TECH FARMER | CODE CULTIVATOR | DIGITAL HARVESTER ]
+  
+  <img src="./assets/pixel-farmer.gif" width="150px">
+</div>
 
-[![Farming Simulator](https://img.shields.io/badge/Level-Tech_Farmer-brightgreen)]()
-[![XP](https://img.shields.io/badge/XP-9999+-blue)]()
-[![Crops](https://img.shields.io/badge/Crops-Growing-success)]()
+<div align="center">
 
-## 🎮 Character Stats
+[![Tech Level](https://img.shields.io/badge/TECH_LEVEL-99-00ff00?style=for-the-badge&labelColor=black)]()
+[![Agro Power](https://img.shields.io/badge/AGRO_POWER-MAXIMUM-00ff00?style=for-the-badge&labelColor=black)]()
+[![Boss Status](https://img.shields.io/badge/STATUS-LEGENDARY-00ff00?style=for-the-badge&labelColor=black)]()
 
-```ascii
-Nome: Kaik Gilberto
-Classe: Desenvolvedor Agrícola
-Especialidade: Tecnologia + Agricultura
-Level: FullStack
+</div>
+
+<img src="./assets/divider.gif" width="100%">
+
+## 【﻿ＳＹＳＴＥＭ　ＳＴＡＴＳ】
+
+```css
+ADMIN: KAIK GILBERTO
+CLASS: AGRICULTURAL DEVELOPER
+SPEC: CYBER FARMING
+RANK: S-TIER FULLSTACK
 ```
 
-## 🛠️ Equipment & Skills
+<img src="./assets/terminal.gif" width="100%">
 
-### 💻 Main Skills Tree
-```
-🔸 JavaScript................[████████████] 95%
-🔸 Python...................[███████████-] 90%
-🔸 C#......................[████████----] 75%
-🔸 C++.....................[███████-----] 65%
-🔸 C.......................[██████------] 55%
-```
+## 【﻿ＴＥＣＨ　ＡＲＳＥＮＡＬ】
 
-### 🌟 Special Abilities
-```
-⚔️ Machine Learning.........[█████████---] 85%
-🛡️ Data Science............[████████----] 75%
-🏹 Big Data...............[████████----] 75%
-```
-
-### 🎯 Tech Arsenal
-```
-🔹 Node.js
-🔹 TypeScript
-🔹 React
-🔹 TensorFlow
-🔹 Pandas
-🔹 Scikit-learn
-```
-
-## 🌾 Agricultural Tech Achievements
-
-- 🚜 Desenvolvimento de sistemas de automação para agricultura de precisão
-- 🌱 Implementação de ML para previsão de safras
-- 🤖 Criação de algoritmos para otimização de irrigação
-- 📊 Análise de dados para maximização de produtividade
-
-## 🎯 Current Quest
-
-```ascii
-[MISSÃO ATUAL]: Transformando a agricultura através da tecnologia
-[STATUS]: Em progresso... ██████████░░░░ 75%
-[OBJETIVO]: Combinar tecnologia avançada com práticas agrícolas sustentáveis
-```
-
-## 📫 Como invocar este personagem
+<div align="center">
+  <img src="./assets/js.gif" width="60px">
+  <img src="./assets/python.gif" width="60px">
+  <img src="./assets/csharp.gif" width="60px">
+  <img src="./assets/cpp.gif" width="60px">
+  <img src="./assets/react.gif" width="60px">
+</div>
 
 ```js
-const contact = {
-    email: "seu.email@exemplo.com",
-    linkedin: "linkedin.com/in/seu-perfil",
-    github: "github.com/seu-usuario"
+const techStack = {
+  languages: ['JavaScript', 'Python', 'C#', 'C++', 'C'],
+  aiTools: ['Machine Learning', 'Data Science', 'Big Data'],
+  frameworks: ['Node.js', 'React', 'TypeScript'],
+  agroTech: ['Precision Agriculture', 'Smart Irrigation', 'Crop Analysis']
 }
 ```
 
-### 🏆 Achievement Points
-```
-🌟 +100 Projetos Agrícolas Completados
-🌟 +500 Commits Realizados
-🌟 +50 Bugs Exterminados
-🌟 +200 Cafés Consumidos
-```
+<img src="./assets/divider-2.gif" width="100%">
 
----
-> "Cultivando código e colhendo inovação! 🌱💻"
+## 【﻿ＭＩＳＳＩＯＮＳ】
+
+<div class="mission-container">
+  🌾 Automatização Agrícola Avançada
+  🤖 Sistema de IA para Previsão de Safras
+  🚜 Drones de Monitoramento Inteligente
+  📊 Big Data Analytics para Agricultura
+</div>
+
+<img src="./assets/loading-bar.gif" width="100%">
+
+## 【﻿ＣＯＮＴＡＣＴ　ＰＯＲＴＡＬ】
+
+<div align="center">
+  <a href="https://github.com/seu-usuario">
+    <img src="./assets/github.gif" width="50px">
+  </a>
+  <a href="https://linkedin.com/in/seu-perfil">
+    <img src="./assets/linkedin.gif" width="50px">
+  </a>
+  <a href="mailto:seu.email@exemplo.com">
+    <img src="./assets/email.gif" width="50px">
+  </a>
+</div>
+
+<style>
+  @import url('./style.css');
+</style>
