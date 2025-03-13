@@ -14,12 +14,17 @@ const columns = canvas.width/fontSize;
 
 const rainDrops = Array(Math.floor(columns)).fill(1);
 
+const colors = ['#0ff', '#f0f', '#0f0', '#ff0'];
+let currentColor = 0;
+
 function draw() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    ctx.fillStyle = '#0F0';
-    ctx.font = fontSize + 'px monospace';
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = colors[currentColor];
+    ctx.fillStyle = colors[currentColor];
+    ctx.font = fontSize + 'px "Fira Code", monospace';
 
     for(let i = 0; i < rainDrops.length; i++) {
         const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
@@ -27,6 +32,7 @@ function draw() {
         
         if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975){
             rainDrops[i] = 0;
+            currentColor = (currentColor + 1) % colors.length;
         }
         rainDrops[i]++;
     }
