@@ -1,16 +1,23 @@
-## Hi there 👋
+# 🌾 Kaik Gilberto - Explorador de Dados Agrícolas 🌾
 
-<!--
-**KaikGilberto/KaikGilberto** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Bem-vindo ao meu repositório! Eu sou Kaik Gilberto, um desenvolvedor apaixonado por tecnologia e agricultura. Aqui você encontrará um pouco sobre minhas habilidades e projetos. Vamos embarcar nessa jornada juntos? 🚀
 
-Here are some ideas to get you started:
+## 🎮 Minhas Habilidades
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```javascript
+const skills = {
+  languages: ["JavaScript", "Python", "C", "C#", "C++"],
+  frameworks: ["Node.js", "TypeScript", "Pandas", "NumPy", "TensorFlow", "Scikit-Learn"],
+  technologies: ["Machine Learning", "Data Science", "Big Data"],
+  specialization: "Agricultura"
+};
+
+function showSkills() {
+  console.log("🛠️ Habilidades:");
+  console.log("Linguagens de Programação: " + skills.languages.join(", "));
+  console.log("Bibliotecas e Frameworks: " + skills.frameworks.join(", "));
+  console.log("Tecnologias de Dados: " + skills.technologies.join(", "));
+  console.log("Especialização: " + skills.specialization);
+}
+
+showSkills();
