@@ -3,12 +3,13 @@ class RoutineManager {
     constructor() {
         this.tasks = this.loadTasks();
         this.contentDiv = document.getElementById('content');
+        this.idCounter = Date.now(); // Initialize counter for unique IDs
         this.init();
     }
 
     init() {
-        this.render();
         this.setupEventListeners();
+        this.render();
     }
 
     loadTasks() {
@@ -24,7 +25,7 @@ class RoutineManager {
         if (!description.trim()) return;
         
         const task = {
-            id: Date.now(),
+            id: ++this.idCounter, // Increment counter to ensure unique IDs
             description: description.trim(),
             completed: false,
             createdAt: new Date().toISOString()
@@ -62,32 +63,8 @@ class RoutineManager {
 <span style="color: #f0f;">STATUS:</span> <span style="color: #0f0;">${completedCount}/${totalCount} tasks completed</span>
 
 <span style="color: #ff0;">┌─ ADD NEW TASK</span>
-<input type="text" id="taskInput" placeholder="Enter your task..." style="
-    background: rgba(0, 255, 255, 0.1);
-    border: 1px solid #0ff;
-    color: #0ff;
-    padding: 10px;
-    font-family: 'Fira Code', monospace;
-    font-size: 14px;
-    width: 400px;
-    margin: 10px 0;
-    outline: none;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-">
-<button id="addTaskBtn" style="
-    background: rgba(0, 255, 0, 0.2);
-    border: 2px solid #0f0;
-    color: #0f0;
-    padding: 10px 20px;
-    font-family: 'Fira Code', monospace;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 10px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-    transition: all 0.3s;
-" onmouseover="this.style.background='rgba(0, 255, 0, 0.4)'; this.style.boxShadow='0 0 20px rgba(0, 255, 0, 0.5)';" onmouseout="this.style.background='rgba(0, 255, 0, 0.2)'; this.style.boxShadow='0 0 10px rgba(0, 255, 0, 0.3)';">
+<input type="text" id="taskInput" class="task-input" placeholder="Enter your task...">
+<button id="addTaskBtn" class="add-task-btn">
     [+] ADD TASK
 </button>
 
@@ -110,11 +87,11 @@ class RoutineManager {
                     'color: #0f0; text-decoration: line-through; opacity: 0.6;' : 
                     'color: #0ff;';
                 
-                const deleteBtn = `<span style="color: #f00; cursor: pointer; margin-left: 10px; text-shadow: 0 0 5px #f00;" class="delete-btn" data-id="${task.id}" title="Delete task">[X]</span>`;
+                const deleteBtn = `<span class="delete-btn" data-id="${task.id}" title="Delete task">[X]</span>`;
                 
                 html += `
 <div style="margin: 10px 0; padding: 10px; background: rgba(0, 255, 255, 0.05); border-left: 3px solid ${task.completed ? '#0f0' : '#ff0'}; border-radius: 3px;">
-    <span style="cursor: pointer;" class="task-toggle" data-id="${task.id}">
+    <span class="task-toggle" data-id="${task.id}">
         ${status} <span style="${textStyle}">${this.escapeHtml(task.description)}</span>
     </span>
     ${deleteBtn}
@@ -140,8 +117,9 @@ class RoutineManager {
     }
 
     setupEventListeners() {
-        // Use event delegation for dynamic elements
+        // Use event delegation for all dynamic elements - single click handler
         this.contentDiv.addEventListener('click', (e) => {
+            // Handle task toggle
             if (e.target.classList.contains('task-toggle') || e.target.closest('.task-toggle')) {
                 const toggleElement = e.target.classList.contains('task-toggle') ? 
                     e.target : e.target.closest('.task-toggle');
@@ -149,16 +127,15 @@ class RoutineManager {
                 this.toggleTask(id);
             }
             
+            // Handle task deletion
             if (e.target.classList.contains('delete-btn')) {
                 const id = parseInt(e.target.dataset.id);
                 if (confirm('Delete this task?')) {
                     this.deleteTask(id);
                 }
             }
-        });
-
-        // Re-attach event listeners after render using delegation
-        this.contentDiv.addEventListener('click', (e) => {
+            
+            // Handle add task button
             if (e.target.id === 'addTaskBtn') {
                 const input = document.getElementById('taskInput');
                 if (input) {

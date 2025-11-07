@@ -92,3 +92,56 @@ img {
     animation: glitch 0.3s infinite;
     animation-timing-function: steps(1);
 }
+
+/* Routine Manager Styles */
+.task-input {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid #0ff;
+    color: #0ff;
+    padding: 10px;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    width: 400px;
+    margin: 10px 0;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.task-input:focus {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.add-task-btn {
+    background: rgba(0, 255, 0, 0.2);
+    border: 2px solid #0f0;
+    color: #0f0;
+    padding: 10px 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.add-task-btn:hover {
+    background: rgba(0, 255, 0, 0.4);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.delete-btn {
+    color: #f00;
+    cursor: pointer;
+    margin-left: 10px;
+    text-shadow: 0 0 5px #f00;
+}
+
+.delete-btn:hover {
+    text-shadow: 0 0 10px #f00;
+}
+
+.task-toggle {
+    cursor: pointer;
+}
